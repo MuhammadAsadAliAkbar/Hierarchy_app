@@ -21,7 +21,7 @@ app.use('/api/employees', require('./routes/employeeRoutes'));
 // Python analytics proxy
 app.get('/api/analytics/org-health', async (req, res) => {
   try {
-    const url = process.env.PYTHON_SERVICE_URL || 'http://localhost:8001';
+    const url = process.env.PYTHON_SERVICE_URL;
     const response = await fetch(`${url}/org-health`);
     const data = await response.json();
     res.json(data);
