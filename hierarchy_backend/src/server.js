@@ -38,7 +38,7 @@ app.get('/api/analytics/org-health', async (req, res) => {
   }
 });
 
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ success: true, message: 'Hierarchy Management API running' });
 });
 
